@@ -1,0 +1,12 @@
+# Editor specific
+.idea/
+
+# Cache
+**/__pycache__/
+
+# Test folders and files
+**/*.test.py
+**/*.test.sh
+
+# Special files
+database/config.json
