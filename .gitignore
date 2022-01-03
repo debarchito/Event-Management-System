@@ -9,4 +9,4 @@
 **/*.test.sh
 
 # Special files
-database/config.json
+**/config.json
