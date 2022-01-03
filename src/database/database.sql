@@ -6,12 +6,9 @@ create table events (
     id varchar(10) primary key not null,
     name tinytext not null,
     description text not null,
-    `date` date not null
-);
-
-create table recycle_bin (
-    id varchar(10) primary key not null,
-    name tinytext not null,
-    description text not null,
-    `date` date not null
+    event_manager tinytext not null,
+    start_date date not null,
+    end_date date not null,
+    budget int not null,
+    location tinytext not null
 );
