@@ -3,9 +3,11 @@ from json import load
 from mysql.connector import connect, Error, errorcode
 from sys import exit
 from modules.events import *
+from modules.highlight import highlight_mode_init
+
 
 options = """
- Select your option (a-g, A-G, 1-7):
+ Select your option (a-e, A-E, 1-5):
 
     (a) Create a new event
     (b) List event(s)
@@ -14,6 +16,8 @@ options = """
     (e) Delete event(s)"""
 
 help_message = """
+ Type "!" to enter highlight mode
+
  Type ".options" or ".o" to view the options again
  Type ".exit" or ".e" to exit the app
  Type ".help" or ".h" to print this help message again"""
@@ -48,19 +52,21 @@ def init():
                         if inp[0] == ".":
                             invoker(inp[1:])
                         else:
-                            if inp in ("a", "1"):
+                            if inp == "!":
+                                highlight_mode_init(con, invoker)
+                            elif inp in ("a", "1"):
                                 create_new_event(con, invoker)
                             elif inp in ("b", "2"):
-                                list_events(con, False)
+                                list_events(con)
                             elif inp in ("c", "3"):
-                                pass
+                                view_event_contents(con, invoker)
                             elif inp in ("d", "4"):
-                                pass
+                                edit_events(con, invoker)
                             elif inp in ("e", "5"):
                                 delete_events(con, invoker)
                             else:
                                 print(
-                                    f'\n [!] ChoiceError: "{inp}" is an invalid choice. Choose from: a-g, A-G, 1-7'
+                                    f'\n [!] ChoiceError: "{inp}" is an invalid choice. Choose from: a-e, A-E, 1-5 or >'
                                 )
                     else:
                         pass

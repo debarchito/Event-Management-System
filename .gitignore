@@ -1,5 +1,5 @@
 # Editor specific
-.vscode/
+.vscode/settings.json
 
 # Cache
 **/__pycache__/
@@ -9,4 +9,4 @@
 **/*.test.sh
 
 # Special files
-**/config.json
+src/database/config.json

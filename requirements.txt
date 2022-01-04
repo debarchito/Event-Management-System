@@ -1,1 +1,5 @@
-mysql-connector-python==8.0.27
+mysql-connector-python>=8.0.27
+numpy>=1.22.0
+pandas>=1.3.5
+Pillow>=9.0.0
+matplotlib>=3.5.1

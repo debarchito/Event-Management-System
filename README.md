@@ -7,6 +7,8 @@
 
 ## Working
 
+**NOTE:** Check the `srcipts` folder if you want to get things done quickly. Update username and password before running `mysql_setup.sh`. If you are using VSCode, I have included my `tasks.json` for start and format tasks. Formatting is powered by *Black* but is optional which is why it is not included in `requirements.txt`.
+
 #### #1 Python Environment Setup
 ```bash
 $ git clone https://github.com/debarchito/Event-Management-System.git
@@ -20,7 +22,7 @@ $ pip install -r requirements.txt
 You will find a `database.sql` file in `./src/database`. You need to run this file in MySQL console. Here is how you can do it (considering you are already in Event-Management-System folder in terminal)
 ```bash
 $ cd src/database
-$ mysql -u <USER> -p
+$ mysql -u <USERNAME> -p
 Enter password: ********
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 9
@@ -45,7 +47,6 @@ You will find a `config.json.example` file in `./src/database`. Rename it to `co
     "password": "<YOUR MYSQL PASSWORD GOES HERE>",
     "database": "EventManagementSystem"
 }
-
 ```
 
 #### #4 Start
@@ -55,8 +56,6 @@ conda activate EventManagementSystem
 cd src
 python main.py
 ```
-
-#### Enjoy!
 
 ## LICENSE
 

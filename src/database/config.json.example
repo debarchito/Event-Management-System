@@ -1,6 +1,6 @@
 {
-    "host": "~host~",
+    "host": "localhost",
     "user": "~user~",
     "password": "~password~",
-    "database": "~database~"
+    "database": "EventManagementSystem"
 }

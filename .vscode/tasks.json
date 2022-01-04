@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "process",
+      "label": "format",
+      "command": "${config:python.pythonPath}",
+      "args": [
+        "-m",
+        "black",
+        "src/"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "type": "process",
+      "label": "start",
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "command": "${config:python.pythonPath}",
+      "args": [
+        "main.py"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
