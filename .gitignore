@@ -1,5 +1,6 @@
 # Editor specific
-.vscode/settings.json
+.vscode/**
+!.vscode/tasks.json
 
 # Cache
 **/__pycache__/

@@ -5,21 +5,23 @@
 - Python v3.8+
 - MySQL Community Server v8+
 
-## Working
+## Setup
 
-**NOTE:** Check the `srcipts` folder if you want to get things done quickly. Update username and password before running `mysql_setup.sh`. If you are using VSCode, I have included my `tasks.json` for start and format tasks. Formatting is powered by *Black* but is optional which is why it is not included in `requirements.txt`.
+Once you clone this repository, you will find some scripts under the `scripts` folder. First, run `python-setup.sh` to create the required Python environment. Then, run `mysql-setup.sh` to configure MySQL accordingly. It will ask for your MySQL username and password; everything else will be handled automatically. Lastly, you can run the project using the `start.sh` script. If you are on windows, use **Git Bash** to run the scripts. For VSCode users, I have included my `tasks.json` for start and format tasks. Formatting is powered by **Black** but is optional which is why it is excluded from `requirements.txt`.
+
+In case you want to set things up manually, here is how you can do it:
 
 #### #1 Python Environment Setup
 ```bash
-$ git clone https://github.com/debarchito/Event-Management-System.git
-$ cd Event-Management-System
-$ conda create -n EventManagementSystem python=3.8
-$ conda activate EventManagementSystem
-$ pip install -r requirements.txt
+git clone https://github.com/debarchito/Event-Management-System.git
+cd Event-Management-System
+conda create -n EventManagementSystem python=3.8
+conda activate EventManagementSystem
+pip install -r requirements.txt
 ```
 
 #### #2 MySQL Setup
-You will find a `database.sql` file in `./src/database`. You need to run this file in MySQL console. Here is how you can do it (considering you are already in Event-Management-System folder in terminal)
+You will find a `database.sql` file in **[src/database](/src/database/)**. You need to run this file in MySQL console. Here is how you can do it (considering you are already in Event-Management-System folder in terminal)
 ```bash
 $ cd src/database
 $ mysql -u <USERNAME> -p
@@ -39,7 +41,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql> source database.sql
 ```
 #### #3 Configuration
-You will find a `config.json.example` file in `./src/database`. Rename it to `config.json` and update the contents of the file accordingly:
+You will find a `config.json.example` file in **[src/database](/src/database/)**. Rename it to `config.json` and update the contents of the file accordingly:
 ```json
 {
     "host": "localhost",
@@ -59,4 +61,4 @@ python main.py
 
 ## LICENSE
 
-This repository is licensed under the MIT License.
+This repository is licensed under the [MIT License](/LICENSE).

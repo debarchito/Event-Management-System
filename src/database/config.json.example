@@ -1,6 +1,6 @@
 {
-    "host": "localhost",
-    "user": "~user~",
-    "password": "~password~",
-    "database": "EventManagementSystem"
+  "host": "localhost",
+  "user": "${username}",
+  "password": "${password}",
+  "database": "EventManagementSystem"
 }
