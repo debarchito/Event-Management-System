@@ -66,7 +66,7 @@ def init():
                                 delete_events(con, invoker)
                             else:
                                 print(
-                                    f'\n [!] ChoiceError: "{inp}" is an invalid choice. Choose from: a-e, A-E, 1-5 or >'
+                                    f'\n [!] ChoiceError: "{inp}" is an invalid choice. Choose from: a-e, A-E, 1-5 or !'
                                 )
                     else:
                         pass
